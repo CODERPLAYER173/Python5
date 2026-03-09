@@ -6,13 +6,17 @@ screen = Screen()
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
-a = pandas.read_csv("50_states.csv")
-location_x = a["x"].tolist()
-location_y = a["y"].tolist()
-b = turtle.textinput("guess the State ","What is the name of the specific state")
-state = a["state"].tolist()
-if  b in state:
-    text.hideturtle()
-    text.teleport()
-print(a[(b[1])])
+data = pandas.read_csv("50_states.csv")
+state = data["state"].tolist()
+score = 0
+while score <= 50:
+
+    b = turtle.textinput(f'guess the State your score is {score}', "What is the name of the specific state")
+    if  b in state:
+        score += 1
+        x = data.x[data.state == b].tolist()
+        y = data.y[data.state == b].tolist()
+        text.hideturtle()
+        text.teleport(x[0],y[0])
+        text.write(b,move=False,align="center",font=("Arial",20,"bold"))
 turtle.mainloop()
