@@ -4,7 +4,6 @@ from turtle import Screen
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
-
 screen = Screen()
 cars = CarManager()
 screen.setup(width=600, height=600)
@@ -14,8 +13,6 @@ player  = Player()
 game_is_on = True
 screen.listen()
 screen.onkeyrelease(player.move,"w")
-
-
 while game_is_on:
     time.sleep(0.1)
     screen.update()
