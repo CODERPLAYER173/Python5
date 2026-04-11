@@ -1,5 +1,6 @@
 
 from tkinter import *
+from tkinter import  messagebox as ms
 import pandas as pd
 from PIL import ImageTk, Image
 import random
@@ -11,15 +12,15 @@ symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 #functions
 def Save():
+    response = ms.askyesno("Form Submission", "Do you want to continue with this password")
     password = Password.get()
     website = Website.get()
     email = Email.get()
     fn = "Newfile.csv"
     data = ([{"Website name": website,"Email address": email,"Password": password}])
     d = pd.DataFrame(data)
-    d.to_excel(fn, index=False, header=False)
+    d.to_csv(fn, mode= "a",index=False, header=False)
     print(d)
-
 
 def password_generator():
     passsword = ""
