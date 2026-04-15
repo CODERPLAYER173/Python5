@@ -1,6 +1,7 @@
 import math
-
+from PIL import Image, ImageTk
 from tkinter import *
+print(TkVersion)
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -44,7 +45,6 @@ def count_down(count):
 
 
 
-
     canvas.itemconfig(tt,text =f'{min}:{sec}')
     if count > 0:
         window.after(1000, count_down, count - 1)
@@ -60,7 +60,7 @@ canvas.config(bg=YELLOW,highlightthickness=0)
 
 title = Label(text="TIMER",fg=GREEN,bg=YELLOW, font=("Arial",35,"bold"))
 title.grid(row = 0,column= 2)
-a =  PhotoImage(file = "tomato.png")
+a = PhotoImage(file = "/Users/dheerajsrivastava/Documents/GitHub/Python5/pomodoro-start/tomato.png")
 
 
 canvas.create_image(100, 112,image =a)
