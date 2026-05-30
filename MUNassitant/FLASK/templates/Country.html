@@ -1,0 +1,45 @@
+<html>
+<head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/Country.css">
+    <title>meow</title>
+
+</head>
+<body>
+<h3 class = "title">Enter The country Name</h3>
+    <form method="post">
+        <label>
+            <input class = "secondry" type="text" name="Country" required>
+        </label>
+        <input class = "main" type="submit" value="Enter">
+    </form>
+
+ {% if result %}
+
+        <p>{{ result.country }}</p>
+
+        <p><b>Capital:</b> {{ result.capital }}</p>
+
+        <p><b>Population:</b> {{ result.population }}</p>
+
+        <p><b>Borders:</b> {{ result.borders }}</p>
+
+        <p><b>Area:</b> {{ result.area }}</p>
+
+        <p><b>Timezones:</b> {{ result.timezones }}</p>
+
+        <p><b>Rivals:</b> {{ result.rivals }}</p>
+
+        <p><b>Allies:</b> {{ result.allies }}</p>
+
+        <p><b>Organizations:</b> {{ result.organizations }}</p>
+
+    {% endif %}
+
+</body>
+</html>
+
+ 

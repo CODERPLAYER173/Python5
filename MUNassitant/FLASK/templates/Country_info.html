@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Research</title>
+</head>
+<body>
+
+    <h1>Country Research Tool</h1>
+
+    <input type="text" id="countryInput" placeholder="Enter Country Name">
+    <button onclick="countryResearch()">Search</button>
+
+    <div id="output"></div>
+
+    <script>
+        async function countryResearch() {
+
+            const country = document.getElementById("countryInput").value;
+            const output = document.getElementById("output");
+
+            // CSV-style data
+            const countryData = [
+                {
+                    Country: "India",
+                    Major_Rivals: "China, Pakistan",
+                    Allies: "USA, France, Russia",
+                    Organizations: "UN, BRICS, G20"
+                },
+                {
+                    Country: "USA",
+                    Major_Rivals: "China, Russia",
+                    Allies: "UK, Japan, NATO",
+                    Organizations: "UN, NATO, G7"
+                }
+            ];
+
+            // Fetch country data from REST Countries API
+            const response = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+            const data = await response.json();
+
+            const info = data[0];
+
+            // Find country in local dataset
+            const b = countryData.find(
+                x => x.Country.toLowerCase() === country.toLowerCase()
+            );
+
+            output.innerHTML = `
+                <h2>${info.name.common}</h2>
+
+                <p><strong>Capital:</strong> ${info.capital}</p>
+
+                <p><strong>Population:</strong> ${info.population}</p>
+
+                <p><strong>Borders:</strong> ${
+                    info.borders ? info.borders.join(", ") : "None"
+                }</p>
+
+                <p><strong>Area:</strong> ${info.area} km²</p>
+
+                <p><strong>Timezones:</strong> ${info.timezones.join(", ")}</p>
+
+                <hr>
+
+                <p><strong>Rivals:</strong> ${
+                    b ? b.Major_Rivals : "No Data"
+                }</p>
+
+                <p><strong>Allies:</strong> ${
+                    b ? b.Allies : "No Data"
+                }</p>
+
+                <p><strong>Organizations Affiliated:</strong> ${
+                    b ? b.Organizations : "No Data"
+                }</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
+
