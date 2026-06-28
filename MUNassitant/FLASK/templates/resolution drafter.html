@@ -1,0 +1,56 @@
+<html>
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/resolution_drafter.css">
+    <title>Resolution Generator</title>
+</head>
+<body>
+<div class = "title">
+    <h1>Resolution Drafter</h1>
+</div>
+<div class = "inputs">
+    <form method="post">
+    <div class = committee_input>
+
+        <label>
+        <input placeholder="Enter the committee" class = "input1" type="text" name="Committee">
+        </label>
+    </div>
+    <div class = Agenda_input>
+        <label>
+        <input placeholder="Enter the Agenda" class = "input2" type="text" name="agenda">
+        </label>
+    </div>
+    <div class = Country_input>
+        <label>
+        <input placeholder="Enter the Country" class = "input3" type="text" name="country">
+        </label>
+    </div>
+    <div class = committee_input>
+        <label>
+        <input placeholder="Enter the topic of speech/gsl   " class = "input4" type="text" name="topic">
+        </label>
+    </div>
+    <div class = Time_input>
+        <label>
+        <input placeholder="Enter the time of speech/gsl   " class = "input5" type="text" name="time">
+            <input class = "submit" type="submit" value="Enter">
+        </label>
+    </div>
+        <div class = Speech_input>
+        <label>
+        <input placeholder="Enter the  speech/gsl   " class = "input6" type="text" name="speech">
+            <input class = "submit" type="submit" value="Enter">
+        </label>
+    </div>
+        </form>
+</div>
+{% if response %}
+<div class = response> <p>{{response.text}}</p>
+</div>
+
+{% endif %}
+</body>
+</html>

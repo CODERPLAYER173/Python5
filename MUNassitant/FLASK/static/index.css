@@ -13,9 +13,6 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
 }
-.Title {
-
-}
 
 div > .Button-1 button{
     border-style: hidden;
@@ -46,7 +43,7 @@ div > .Button-2  button{
     font-optical-sizing: auto;
     font-style: normal;
     padding-top: 20px;
-    padding-left:60px;
+    padding-left:10px;
     display: flex;
      font-size: 20px;
     width: 200px;
@@ -78,4 +75,70 @@ div > .Button-3 button{
 div > .Button-3{
     padding:30px 30px;
     margin-left: 40%;
+}
+div > .Button-4 button{
+    border-style: hidden;
+        color: white;
+    background-color: #4a7cde;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 15px;
+    padding-left:45px;
+    display: flex;
+     font-size: 20px;
+    width: 200px;
+  height: 60px;
+
+
+}
+div > .Button-4{
+    padding:30px 30px;
+    margin-left: 40%;
+    display: flex;
+}
+div > .Button-5 button{
+    border-style: hidden;
+        color: white;
+    background-color: #4a7cde;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 15px;
+    padding-left:45px;
+    display: flex;
+     font-size: 20px;
+    width: 200px;
+  height: 60px;
+
+
+}
+div > .Button-5{
+    padding:30px 30px;
+    margin-left: 40%;
+    display: flex;
+}
+div > .Button-6 button{
+    border-style: hidden;
+        color: white;
+    background-color: #4a7cde;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 15px;
+    padding-left:45px;
+    display: flex;
+     font-size: 20px;
+    width: 200px;
+  height: 60px;
+
+
+}
+div > .Button-6{
+    padding:30px 30px;
+    margin-left: 40%;
+    display: flex;
 }

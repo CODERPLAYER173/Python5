@@ -7,7 +7,7 @@ h3{
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    width: 400px;
+    width: 500px;
     padding-left: 20px;
 }
 .main{
@@ -22,12 +22,13 @@ h3{
 }
 
 .secondry{
-    height: 30px;
-    width: 199px;
+    height: 49px;
+    width: 260px;
 }
 
 
 p{
+
     font-size: 35px;
     font-family: "Roboto Condensed", sans-serif;
     color: #4a7cde;

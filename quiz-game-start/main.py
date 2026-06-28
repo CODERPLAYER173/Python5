@@ -3,7 +3,7 @@ from question_model import Question
 from quiz_brain import QuizBrain
 
 Question_bank =[]
-for i in range(0,10):
+for i in range(0,len(question_data)):
     text = question_data[i].get("question")
     answer = question_data[i].get("correct_answer")
     new_q = Question(text=text,answer=answer)

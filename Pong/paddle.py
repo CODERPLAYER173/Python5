@@ -7,7 +7,7 @@ class Paddle1(Tu):
         self.penup()
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_len=6, stretch_wid=0.75)
+        self.shapesize(stretch_len=5, stretch_wid=0.5)
         self.speed("fastest")
         self.teleport(x=-350,y=0)
 
@@ -24,7 +24,7 @@ class Paddle2(Tu):
         self.penup()
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_len=6, stretch_wid=0.75)
+        self.shapesize(stretch_len=5, stretch_wid=0.50)
         self.speed("fastest")
         self.teleport(x=350,y=0)
 

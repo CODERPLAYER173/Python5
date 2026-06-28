@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poi generator </title>
+</head>
+
+<body>
+<div class = "title">
+    <h1>Resolution Drafter</h1>
+</div>
+<div class = "inputs">
+    <form method="post">
+    <div class = committee_input>
+
+        <label><input placeholder        r="Enter the committee" class = "input1" type="text" name="Committee">
+        </label>
+    </div>
+    <div class = Agenda_input>
+        <label>
+        <input placeholder="Enter the Agenda" class = "input2" type="text" name="agenda">
+        </label>
+    </div>
+    <div class = Country_input>
+        <label>
+        <input placeholder="Enter the Country" class = "input3" type="text" name="country">
+        </label>
+    </div>
+    <div class = committee_input>
+        <label>
+        <input placeholder="Enter the topic of speech/gsl   " class = "input4" type="text" name="topic">
+        </label>
+    </div>
+    <div class = Time_input>
+        <label>
+        <input placeholder="Enter the time of speech/gsl   " class = "input5" type="text" name="time">
+            <input class = "submit" type="submit" value="Enter">
+        </label>
+    </div>
+        <div class = Speech_input>
+        <label>
+        <input placeholder="Enter the  speech/gsl   " class = "input6" type="text" name="speech">
+            <input class = "submit" type="submit" value="Enter">
+        </label>
+    </div>
+        </form>
+</div>
+{% if response %}
+<div class = response> <p>{{response.text}}</p>
+</div>
+
+{% endif %}
+</body>
+</body>
+</html>

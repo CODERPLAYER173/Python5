@@ -1,5 +1,6 @@
 from tkinter import *
 
+from Python5.Gema_quiz.main import question_text
 
 
 class QuizUI:
@@ -14,12 +15,14 @@ class QuizUI:
         self.root.config(bg=self.THEME_COLOR)
         #score
         self.score = 0
-        self.Score = Label(self.root, text=f"score:{self.score}",fg="white")
+        self.Score = Label(self.root, text=f"score:{self.score}",fg="black")
         self.Score.grid(row=0, column=1)
         #canvas
-        canvas = Canvas(self.root)
-        canvas.config(height = 200, width = 400, bg="white")
-        canvas.grid(row=3, column=3)
+        self.canvas = Canvas(self.root)
+        self.canvas.config(height = 200, width = 375, bg="white")
+        self.canvas.place(x=7, y=100)
         mainloop()
+    def show_question(self):
+        self.canvas.itemconfig(text= question_text)
 
 quiz = QuizUI()
