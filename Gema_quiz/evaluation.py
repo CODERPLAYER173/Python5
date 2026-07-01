@@ -1,15 +1,13 @@
+from data import category_input, question_number
+import matplotlib.pyplot as plt
+import pandas as pd
+#saves key info like time and score in Missing ,runs in main alongside  save function
+
+def Save_progress(b,time_taken):
+
+    new_row = [[question_number, category_input, time_taken, b]]
+
+    df  = pd.DataFrame(new_row,columns=["Number_Of_Question ", "Category", "Time Taken", "Score"])
+    df.to_csv("High_Score.csv",mode='a',index=False,header=False)
 
 
-def Save_progress():
-    import pandas as pd
-
-    from data import category, q_no
-    from main import time_taken, b
-    new_row = {
-        "No_of_questions": q_no,
-        "Category": category,
-        "time_taken": time_taken,
-        "score": b
-    }
-    a = pd.DataFrame(new_row)
-    a.to_csv("Missing questions.csv")
